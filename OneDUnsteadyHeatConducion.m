@@ -47,8 +47,8 @@ for k=1:n-1
 end
 
 %%Filling the constant vector for the first iteration
-b(1)=p*T0;
-b(n-1,1)=p*T_end;
+b(1)=p*T0+T(1,1);
+b(n-1,1)=p*T_end+T(end,1);
 for u=2:n-2
     b(u)=T(u);
 end
